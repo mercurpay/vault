@@ -2,5 +2,5 @@ micronaut:
   application:
     name: vault
   grpc:
-    port: 15670
+    port: 50051
     healthcheck: true
