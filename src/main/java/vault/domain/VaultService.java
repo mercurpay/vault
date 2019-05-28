@@ -48,7 +48,7 @@ public class VaultService extends VaultServiceGrpc.VaultServiceImplBase {
       log.info("Token opened successfully customer id {} issuer {}",dataByToken.getCustomerId(),dataByToken.getIssuer());
       responseObserver.onNext(dataByToken);
       responseObserver.onCompleted();
-    } catch (Exception ex) {
+      } catch (Exception ex) {
       log.error("Error to open token {}",request.getValue());
       throw new RuntimeException("Error to decrypt token", ex);
     }
